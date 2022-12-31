@@ -1,0 +1,10 @@
+@mixin background_color{
+    background-color: $btn_white_color;
+    border-radius: 0.75rem;
+}
+
+@mixin btn_mixing {
+    margin-top: 20px;
+    font-weight: 600;
+    border: 1px solid $btn_blue_color;
+}

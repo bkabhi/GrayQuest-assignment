@@ -1,0 +1,62 @@
+@import '../../components/Buttons/Close/CloseButton';
+
+.userdetails {
+    @include background_color;
+    display: flex;
+    gap: 10%;
+    padding: 0.5rem 2rem;
+    margin: auto;
+    width: 50%;
+    text-align: left;
+    .userdetails__address{
+        margin-top: 20px;
+        .fontweight{
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin: 8px;
+        }
+    }
+    .userdetails__company{
+        margin-top: 20px;
+        .fontweight{
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            margin: 8px;
+        }
+    }
+    .userdetails__contact>p{
+        margin: 10px;
+    }
+
+    .location {
+        margin-top: 20px;
+    }
+    
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 10rem;
+        width: 18rem;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    }
+
+    @media screen and (max-width: $small) {
+        .gmap_canvas{
+            width: 12rem;
+        }
+    }
+    @media screen and (max-width: $medium) {
+        flex-direction: column;
+    }
+    
+}
+
+.fontweight {
+    font-weight: 600;
+}

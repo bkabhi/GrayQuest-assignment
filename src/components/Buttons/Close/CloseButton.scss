@@ -1,0 +1,14 @@
+.closebutton{
+    @include background_color;
+    @include btn_mixing;
+    color: $btn_blue_color;
+    background-color: $btn_white_color;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: $btn_blue_color;
+        color: $btn_white_color;
+    }
+}

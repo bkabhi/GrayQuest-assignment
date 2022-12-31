@@ -1,0 +1,68 @@
+@import '../../components/Buttons/MoreDetails/MoreButton';
+
+.userlist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap+10px;
+    width: 90%;
+    margin: 20px auto;
+
+    .userCard {
+        padding: 20px;
+        background-color: $btn_white_color;
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: space-between;
+
+        .userCard__details {
+            text-align: left;
+            display: flex;
+            gap: $gap+10px;
+
+            .userCard__name {
+                margin-top: 0.3rem;
+            }
+        }
+
+        .contactIcons {
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.paginationdiv{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    margin-bottom: 2rem;
+    .prevbtn{
+        margin-top: 20px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 1rem;
+        background-color: $btn_white_color;
+        font-weight: 900;
+        &:hover:enabled{
+            background-color: $btn_blue_color;
+            color: $btn_white_color;
+            @include btn_mixing;
+        }
+        &:hover:disabled{
+            cursor: not-allowed;
+        }
+    }
+    .currentPagebtn {
+        @include background_color;
+        @include btn_mixing;
+        background-color: $btn_blue_color;
+        color: $btn_white_color;
+        padding: 0.5rem 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
